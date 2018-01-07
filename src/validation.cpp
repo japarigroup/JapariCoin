@@ -3511,6 +3511,7 @@ bool static LoadBlockIndexDB(const CChainParams& chainparams)
     {
         CBlockIndex* pindex = item.second;
         vSortedByHeight.push_back(std::make_pair(pindex->nHeight, pindex));
+        uiInterface.InitMessage(strprintf(_("Sorting blocks...") + "\n%d / %d", pindex->nHeight, mapBlockIndex.size()));
     }
     sort(vSortedByHeight.begin(), vSortedByHeight.end());
     for (const std::pair<int, CBlockIndex*>& item : vSortedByHeight)
@@ -3544,6 +3545,7 @@ bool static LoadBlockIndexDB(const CChainParams& chainparams)
             pindex->BuildSkip();
         if (pindex->IsValid(BLOCK_VALID_TREE) && (pindexBestHeader == nullptr || CBlockIndexWorkComparator()(pindexBestHeader, pindex)))
             pindexBestHeader = pindex;
+        uiInterface.InitMessage(strprintf(_("Validating blocks...") + "\n%d / %d", pindex->nHeight, vSortedByHeight.size()));
     }
 
     // Load block file info

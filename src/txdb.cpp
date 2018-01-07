@@ -290,6 +290,8 @@ bool CBlockTreeDB::LoadBlockIndexGuts(const Consensus::Params& consensusParams, 
                 if (!CheckProofOfWork(pindexNew->GetBlockHash(), pindexNew->nBits, consensusParams))
                     return error("%s: CheckProofOfWork failed: %s", __func__, pindexNew->ToString());
 
+                uiInterface.InitMessage(strprintf(_("Loading blocks from disk...") + "\n%d / ?", pindexNew->nHeight));
+
                 pcursor->Next();
             } else {
                 return error("%s: failed to read value", __func__);
