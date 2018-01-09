@@ -1,9 +1,6 @@
-BitZeny Core integration/staging tree
+JapariCoin
 =====================================
 
-http://bitzeny.org (old website)  
-http:// (New website) << in preparation  
-https://bitzeny.info (Forum)
 
 * Copyright (c) 2014      BitZeny Core Developers
 * Copyright (c) 2009-2014 Bitcoin Core Developers
@@ -13,47 +10,16 @@ https://bitzeny.info (Forum)
 License
 -------
 
-BitZeny Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
+JapariCoin Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see http://opensource.org/licenses/MIT.
 
 ## Overview 
 
 symbol
 
-![Representation](https://github.com/BitzenyDevTeam/bitzeny-copy/blob/z1.1.x/src/qt/res/icons/bitcoin.png?raw=true)
+JCN
 
-### Concept
-
-Simple and concise.  
-It is as sharp as **Katana**.
-
-### Load map
-
-* ~~New wallet~~
-* ~~Online Wallet~~
-* ~~Mining pool~~ 
-* ~~Forum~~
-* zenyhive(coinhive)
-* Electrum-Zeny
-* Exchange listing
-	* ~~C-CEX~~
-    * ~~Novaexchange~~
-	* Tradesatoshi >> Vote now
-    * Yo-bit
-    * coinexchange
-    * cryptopia
-    * Bleutrade
-    * Bittrex
-    * Poloniex
-* Accessory function	
-* Segwit attachment
-* Anonymous attachment
-* DEX attachment
-* Asset attachment
-* Crosschain platform attachment
-
-
-Build bitzenyd on Ubuntu 16.04
+Build japaricoind on Ubuntu 16.04
 -------------------
 
     sudo apt-get install build-essential
@@ -66,8 +32,8 @@ Build bitzenyd on Ubuntu 16.04
     sudo apt-get install libdb4.8-dev
     sudo apt-get install libdb4.8++-dev
     
-    git clone https://github.com/BitzenyCoreDevelopers/bitzeny.git
-    cd bitzeny
+    git clone https://github.com/japarigroup/JapariCoin.git
+    cd JapariCoin
     ./autogen.sh
     ./configure --without-miniupnpc --without-gui --disable-tests
     make
